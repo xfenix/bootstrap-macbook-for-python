@@ -26,7 +26,7 @@ You got new macbook and you are web developer with python backend and/or typescr
     ```
 1. Install all necessary packages:
     ```bash
-    brew install stats itsycal git iterm2 visual-studio-code karabiner-elements pyenv gpg-suite grammarly
+    brew install stats itsycal git iterm2 visual-studio-code karabiner-elements pyenv gpg-suite grammarly marta
     ```
 1. Configure Iterm2:
    1. Must not bother you ![](iterm2-part1.png)
