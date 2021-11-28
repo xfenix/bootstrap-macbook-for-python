@@ -56,6 +56,11 @@ You got new macbook and you are web developer with python backend and/or typescr
         git config --global user.signingkey KEY_FROM_PREVIOUS_STEP
         git config --global commit.gpgsign true
         ```
+1. File things:
+   1. Create projects dir `mkdir ~/web/`
+   1. Exclude from spotlight indexing (greatly reduce CPU pressure):  -> Settings -> Spotlight -> Privacy, press +, then `⌘ + shift + g` and enter following paths:
+      1. `~/web/`
+      1. `/Users/xfenix/Library/Containers`, where `xfenix` — you current user
 
 ## Python part
 1. Setup pyenv
