@@ -41,14 +41,16 @@ You got new macbook and you are web developer with python backend and/or typescr
    ```
 1. Setup git client:
    1. Generate GPG key in GPG tools
-   1. Run:
-        ```
+   1. Run command:
+        ```bash
         gpg --list-secret-keys
         ```
+        Then copy following key:
+        ![gpg key](./gpg-key.png)
    1. Setup:  
         ```bash
         git config --global user.name "Denis Anikin"
         git config --global user.email ad@xfenix.ru
-        git config --global user.signingkey
+        git config --global user.signingkey KEY_FROM_PREVIOUS_STEP
         git config --global commit.gpgsign true
         ```
