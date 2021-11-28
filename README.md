@@ -1,4 +1,4 @@
-# Fresh macbook bootrstrap
+# Fresh macbook bootstrap
 You got new macbook and you are web developer with python backend and/or typescript frontend? This instruction will help you to prepare macbook for work.
 
   - [Basic setup](#basic-setup)
