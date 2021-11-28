@@ -1,6 +1,7 @@
 # Macbook bootrstrap
 You got new macbook and you are web developer? This instruction will help you.
 
+### Basic setup
 1. Generate ssh key:
     ```bash
     ssh-keygen -o -a 100 -t ed25519 -C "ad@xfenix.ru"
@@ -27,3 +28,7 @@ You got new macbook and you are web developer? This instruction will help you.
     ```bash
     
     ```
+
+### GPG setup
+1. Generate key in GPG tools
+1. 
