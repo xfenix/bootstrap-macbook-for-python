@@ -75,59 +75,71 @@ You got new macbook and you are web developer with python backend and/or typescr
 
 ### VSCode configuration
 This config meant for python development. But you can grab any part of it for other purposes.<br>
-Place following in you `settings.json`:
-```json
-    {
-        "workbench.colorTheme": "GitHub Dark",
-        "workbench.iconTheme": "helium-icon-theme",
-        "workbench.productIconTheme": "fluent-icons",
+1. Install extensions:
+    ```bash
+    code --install-extension emeraldwalk.RunOnSave
+    code --install-extension esbenp.prettier-vscode
+    code --install-extension GitHub.github-vscode-theme
+    code --install-extension helgardrichard.helium-icon-theme
+    code --install-extension mde.select-highlight-minimap
+    code --install-extension miguelsolorio.fluent-icons
+    code --install-extension ms-python.python
+    code --install-extension ms-python.vscode-pylance
+    code --install-extension yzhang.markdown-all-in-one
+    ```
+1. Place following in you `settings.json`:
+    ```json
+        {
+            "workbench.colorTheme": "GitHub Dark",
+            "workbench.iconTheme": "helium-icon-theme",
+            "workbench.productIconTheme": "fluent-icons",
 
-        "markdown.preview.typographer": true,
-        "markdown.extension.orderedList.marker": "one",
+            "markdown.preview.typographer": true,
+            "markdown.extension.orderedList.marker": "one",
 
-        "editor.wordBasedSuggestions": false,
-        "editor.fontFamily": "FiraCode-Retina",
-        "editor.fontSize": 14,
-        "editor.fontLigatures": true,
-        "editor.formatOnPaste": true,
-        "editor.formatOnType": true,
-        "editor.renderWhitespace": "all",
-        "editor.rulers": [
-            120
-        ],
+            "editor.wordBasedSuggestions": false,
+            "editor.fontFamily": "FiraCode-Retina",
+            "editor.fontSize": 14,
+            "editor.fontLigatures": true,
+            "editor.formatOnPaste": true,
+            "editor.formatOnType": true,
+            "editor.renderWhitespace": "all",
+            "editor.rulers": [
+                120
+            ],
 
-        "debug.console.fontSize": 14,
+            "debug.console.fontSize": 14,
 
-        "terminal.integrated.fontSize": 14,
+            "terminal.integrated.fontSize": 14,
 
-        "emmet.triggerExpansionOnTab": true,
-        "emmet.includeLanguages": {
-            "plaintext": "html"
-        },
+            "emmet.triggerExpansionOnTab": true,
+            "emmet.includeLanguages": {
+                "plaintext": "html"
+            },
 
-        "python.formatting.blackPath": "/Users/xfenix/.pyenv/shims/black",
-        "python.formatting.provider": "black",
-        "python.sortImports.path": "/Users/xfenix/.pyenv/shims/isort",
-        "python.sortImports.args": [
-            "--line-width",
-            "120",
-            "--lines-after-imports",
-            "2",
-            "--no-lines-before",
-            "STDLIB,LOCALFOLDER"
-        ],
-        "emeraldwalk.runonsave": {
-            "commands": [
-                {
-                    "match": ".*\\.py$",
-                    "command": "/Users/xfenix/.pyenv/shims/docformatter --in-place ${file}"
-                },
-                {
-                    "match": ".*\\.py$",
-                    "command": "/Users/xfenix/.pyenv/shims/pybetter ${file}"
-                }
-            ]
+            "python.formatting.blackPath": "/Users/xfenix/.pyenv/shims/black",
+            "python.formatting.provider": "black",
+            "python.sortImports.path": "/Users/xfenix/.pyenv/shims/isort",
+            "python.sortImports.args": [
+                "--line-width",
+                "120",
+                "--lines-after-imports",
+                "2",
+                "--no-lines-before",
+                "STDLIB,LOCALFOLDER"
+            ],
+            "emeraldwalk.runonsave": {
+                "commands": [
+                    {
+                        "match": ".*\\.py$",
+                        "command": "/Users/xfenix/.pyenv/shims/docformatter --in-place ${file}"
+                    },
+                    {
+                        "match": ".*\\.py$",
+                        "command": "/Users/xfenix/.pyenv/shims/pybetter ${file}"
+                    }
+                ]
+            }
         }
-    }
-```
-Dont forget to replace in `/Users/xfenix/...` string `xfenix` with you user
+    ```
+1. Dont forget to replace in `/Users/xfenix/...` string `xfenix` with you user
