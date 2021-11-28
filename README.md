@@ -24,6 +24,10 @@ You got new macbook and you are web developer with python backend and/or typescr
     ```bash
     brew install stats itsycal git iterm2 visual-studio-code karabiner-elements pyenv gpg-suite grammarly
     ```
+1. Configure Iterm2:
+   1. Must not bother you ![](iterm2-part1.png)
+   1. Best font ![](iterm2-part2.png)
+   1. Good looking + Guake/Quake like behavior ![](iterm2-part3.png)
 1. For macbook with Apple chip (M1, M1 pro, M1 max) install Rosetta2: 
     ```
     softwareupdate --install-rosetta
