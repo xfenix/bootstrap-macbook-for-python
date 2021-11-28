@@ -5,6 +5,10 @@ You got new macbook and you are web developer? This instruction will help you.
     ```bash
     ssh-keygen -o -a 100 -t ed25519 -C "ad@xfenix.ru"
     ```
+    To copy in the clipboard:
+    ```
+    cat ~/.ssh/id_ed25519.pub | pbcopy
+    ```
 3. Install chrome: https://www.google.com/chrome/
 4. Install homebrew:
     ```bash
