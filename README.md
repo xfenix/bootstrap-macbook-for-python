@@ -89,57 +89,57 @@ This config meant for python development. But you can grab any part of it for ot
     ```
 1. Place following in you `settings.json`:
     ```json
-        {
-            "workbench.colorTheme": "GitHub Dark",
-            "workbench.iconTheme": "helium-icon-theme",
-            "workbench.productIconTheme": "fluent-icons",
+    {
+        "workbench.colorTheme": "GitHub Dark",
+        "workbench.iconTheme": "helium-icon-theme",
+        "workbench.productIconTheme": "fluent-icons",
 
-            "markdown.preview.typographer": true,
-            "markdown.extension.orderedList.marker": "one",
+        "markdown.preview.typographer": true,
+        "markdown.extension.orderedList.marker": "one",
 
-            "editor.wordBasedSuggestions": false,
-            "editor.fontFamily": "FiraCode-Retina",
-            "editor.fontSize": 14,
-            "editor.fontLigatures": true,
-            "editor.formatOnPaste": true,
-            "editor.formatOnType": true,
-            "editor.renderWhitespace": "all",
-            "editor.rulers": [
-                120
-            ],
+        "editor.wordBasedSuggestions": false,
+        "editor.fontFamily": "FiraCode-Retina",
+        "editor.fontSize": 14,
+        "editor.fontLigatures": true,
+        "editor.formatOnPaste": true,
+        "editor.formatOnType": true,
+        "editor.renderWhitespace": "all",
+        "editor.rulers": [
+            120
+        ],
 
-            "debug.console.fontSize": 14,
+        "debug.console.fontSize": 14,
 
-            "terminal.integrated.fontSize": 14,
+        "terminal.integrated.fontSize": 14,
 
-            "emmet.triggerExpansionOnTab": true,
-            "emmet.includeLanguages": {
-                "plaintext": "html"
-            },
+        "emmet.triggerExpansionOnTab": true,
+        "emmet.includeLanguages": {
+            "plaintext": "html"
+        },
 
-            "python.formatting.blackPath": "/Users/xfenix/.pyenv/shims/black",
-            "python.formatting.provider": "black",
-            "python.sortImports.path": "/Users/xfenix/.pyenv/shims/isort",
-            "python.sortImports.args": [
-                "--line-width",
-                "120",
-                "--lines-after-imports",
-                "2",
-                "--no-lines-before",
-                "STDLIB,LOCALFOLDER"
-            ],
-            "emeraldwalk.runonsave": {
-                "commands": [
-                    {
-                        "match": ".*\\.py$",
-                        "command": "/Users/xfenix/.pyenv/shims/docformatter --in-place ${file}"
-                    },
-                    {
-                        "match": ".*\\.py$",
-                        "command": "/Users/xfenix/.pyenv/shims/pybetter ${file}"
-                    }
-                ]
-            }
+        "python.formatting.blackPath": "/Users/xfenix/.pyenv/shims/black",
+        "python.formatting.provider": "black",
+        "python.sortImports.path": "/Users/xfenix/.pyenv/shims/isort",
+        "python.sortImports.args": [
+            "--line-width",
+            "120",
+            "--lines-after-imports",
+            "2",
+            "--no-lines-before",
+            "STDLIB,LOCALFOLDER"
+        ],
+        "emeraldwalk.runonsave": {
+            "commands": [
+                {
+                    "match": ".*\\.py$",
+                    "command": "/Users/xfenix/.pyenv/shims/docformatter --in-place ${file}"
+                },
+                {
+                    "match": ".*\\.py$",
+                    "command": "/Users/xfenix/.pyenv/shims/pybetter ${file}"
+                }
+            ]
         }
+    }
     ```
 1. Dont forget to replace in `/Users/xfenix/...` string `xfenix` with you user
