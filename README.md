@@ -1,7 +1,11 @@
 # Fresh macbook bootrstrap
 You got new macbook and you are web developer with python backend and/or typescript frontend? This instruction will help you to prepare macbook for work.
 
-## Let's roll!
+## Basic setup
+1. Setup o my zsh
+    ```bash
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    ```
 1. Generate ssh key:
     ```bash
     ssh-keygen -o -a 100 -t ed25519 -C "ad@xfenix.ru"
@@ -79,3 +83,23 @@ You got new macbook and you are web developer with python backend and/or typescr
         git config --global user.signingkey KEY_FROM_PREVIOUS_STEP
         git config --global commit.gpgsign true
         ```
+
+## Python part
+1. Setup pyenv
+    ```bash
+    echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
+    ```
+    ```bash
+    echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+    ```
+1. Install and select desired python
+   ```bash
+   pyenv install 3.10.0
+   ```
+   ```bash
+   pyenv global 3.10.0
+   ```
+1. Install all necessary packages
+    ```bash
+    pip install black isort docformatter pybetter
+    ```
