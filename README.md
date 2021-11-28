@@ -146,4 +146,4 @@ This config meant for python development. But you can grab any part of it for ot
         }
     }
     ```
-1. Dont forget to replace in `/Users/xfenix/...` string `xfenix` with you user
+1. Dont forget to replace `xfenix` with you user!
