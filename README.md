@@ -16,7 +16,7 @@ You got new macbook and you are web developer? This instruction will help you.
     ```
 1. Install all necessary packages:
     ```bash
-    brew install stats itsycal git iterm2 visual-studio-code karabiner-elements pyenv
+    brew install stats itsycal git iterm2 visual-studio-code karabiner-elements pyenv gpg-suite
     ```
 1. For macbook with Apple chip (M1, M1 pro, M1 max) install Rosetta2: 
     ```
