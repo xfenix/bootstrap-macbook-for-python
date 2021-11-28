@@ -73,7 +73,7 @@ You got new macbook and you are web developer with python backend and/or typescr
     pip install black isort docformatter pybetter
     ```
 
-### VSCode configuration
+## VSCode configuration
 This config meant for python development. But you can grab any part of it for other purposes.<br>
 1. Install extensions:
     ```bash
