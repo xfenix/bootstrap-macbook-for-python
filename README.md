@@ -78,8 +78,6 @@ This config meant for python development. But you can grab any part of it for ot
 Place following in you `settings.json`:
 ```json
     {
-        "window.zoomLevel": 1,
-
         "workbench.colorTheme": "GitHub Dark",
         "workbench.iconTheme": "helium-icon-theme",
         "workbench.productIconTheme": "fluent-icons",
