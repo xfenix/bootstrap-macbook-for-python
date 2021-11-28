@@ -10,6 +10,7 @@ You got new macbook and you are web developer with python backend and/or typescr
     ```
     cat ~/.ssh/id_ed25519.pub | pbcopy
     ```
+1. Install FiraCode font: https://github.com/tonsky/FiraCode
 1. Install chrome: https://www.google.com/chrome/
 1. Reccomended extensions:
    1. https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en
@@ -21,7 +22,7 @@ You got new macbook and you are web developer with python backend and/or typescr
     ```
 1. Install all necessary packages:
     ```bash
-    brew install stats itsycal git iterm2 visual-studio-code karabiner-elements pyenv gpg-suite
+    brew install stats itsycal git iterm2 visual-studio-code karabiner-elements pyenv gpg-suite grammarly
     ```
 1. For macbook with Apple chip (M1, M1 pro, M1 max) install Rosetta2: 
     ```
@@ -30,13 +31,33 @@ You got new macbook and you are web developer with python backend and/or typescr
 1. Install docker dekstop: https://www.docker.com/products/docker-desktop
 1. Place VSCode config:
    ```json
-   {
+    {
         "workbench.colorTheme": "GitHub Dark",
-        "editor.fontSize": 14,
+        "workbench.iconTheme": "helium-icon-theme",
+        "workbench.productIconTheme": "fluent-icons",
+
         "markdown.preview.typographer": true,
         "markdown.extension.orderedList.marker": "one",
+
+        "editor.wordBasedSuggestions": false,
+        "editor.fontFamily": "FiraCode-Retina",
+        "editor.fontSize": 14,
+        "editor.fontLigatures": true,
         "editor.formatOnPaste": true,
-        "editor.formatOnType": true
+        "editor.formatOnType": true,
+        "editor.renderWhitespace": "all",
+        "editor.rulers": [
+            120
+        ],
+
+        "debug.console.fontSize": 14,
+
+        "terminal.integrated.fontSize": 14,
+
+        "emmet.triggerExpansionOnTab": true,
+        "emmet.includeLanguages": {
+            "plaintext": "html"
+        }
     }
    ```
 1. Setup git client:
