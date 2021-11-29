@@ -30,8 +30,13 @@ You got new macbook and you are web developer with python backend and/or typescr
     ```
 1. Install all necessary packages:
     ```bash
-    brew install stats itsycal git iterm2 visual-studio-code karabiner-elements pyenv gpg-suite grammarly marta node
+    brew install stats itsycal git iterm2 visual-studio-code karabiner-elements pyenv gpg-suite grammarly marta node dozer appcleaner
     ```
+    1. Karabiner elements will be useful for remapping keys on the Russian keyboard layout. This really helps for ~ symbol return. On other keyboard layouts it not so useful by default
+    1. Dozer help you to organize your menu bar, since macbook notch gain troubles in this area
+    1. Grammarly is the best app for good english writing skills, those whom i lack
+    1. Marta is the sublime-like completely free file manager
+    1. AppCleaner help you clean garbage after application removal
 1. Configure Iterm2:
    1. Must not bother you ![](iterm2-part1.png)
    1. Best font ![](iterm2-part2.png)
