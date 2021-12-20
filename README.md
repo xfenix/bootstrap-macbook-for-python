@@ -118,6 +118,7 @@ This config meant for python development. But you can grab any part of it for ot
         "editor.fontLigatures": true,
         "editor.formatOnPaste": true,
         "editor.formatOnType": true,
+        "editor.formatOnSave": true,
         "editor.renderWhitespace": "all",
         "editor.rulers": [
             120
