@@ -132,6 +132,9 @@ This config meant for python development. But you can grab any part of it for ot
             "plaintext": "html"
         },
 
+        "python.defaultInterpreterPath": "/Users/xfenix/.pyenv/shims/python",
+        "python.linting.mypyPath": "/Users/xfenix/.pyenv/shims/mypy",
+        "python.linting.mypyEnabled": true,
         "python.formatting.blackPath": "/Users/xfenix/.pyenv/shims/black",
         "python.formatting.provider": "black",
         "python.sortImports.path": "/Users/xfenix/.pyenv/shims/isort",
