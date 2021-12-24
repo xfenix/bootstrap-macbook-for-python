@@ -78,10 +78,10 @@ You got new macbook and you are web developer with python backend and/or typescr
     ```
 1. Install and select desired python
    ```bash
-   pyenv install 3.10.0
+   pyenv install 3.10.1
    ```
    ```bash
-   pyenv global 3.10.0
+   pyenv global 3.10.1
    ```
 1. Install all necessary packages
     ```bash
