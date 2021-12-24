@@ -85,14 +85,14 @@ You got new macbook and you are web developer with python backend and/or typescr
    ```
 1. Install all necessary packages
     ```bash
-    pip install black isort docformatter pybetter
+    pip install black isort docformatter pybetter autoflake
     ```
 
 ## VSCode configuration
 This config meant for python development. But you can grab any part of it for other purposes.<br>
 1. Install extensions:
     ```bash
-    code --install-extension emeraldwalk.RunOnSave
+    code --install-extension wk-j.save-and-run
     code --install-extension esbenp.prettier-vscode
     code --install-extension GitHub.github-vscode-theme
     code --install-extension helgardrichard.helium-icon-theme
@@ -152,18 +152,25 @@ This config meant for python development. But you can grab any part of it for ot
                 "source.organizeImports": true
             }
         },
-        "emeraldwalk.runonsave": {
+        "saveAndRun": {
             "commands": [
                 {
-                    "match": ".*\\.py$",
-                    "command": "/Users/xfenix/.pyenv/shims/docformatter --in-place ${file}"
+                    "match": ".py",
+                    "cmd": "/Users/xfenix/.pyenv/shims/docformatter --in-place ${file}",
+                    "silent": true,
                 },
                 {
-                    "match": ".*\\.py$",
-                    "command": "/Users/xfenix/.pyenv/shims/pybetter ${file}"
-                }
+                    "match": ".py",
+                    "cmd": "/Users/xfenix/.pyenv/shims/pybetter ${file}",
+                    "silent": true,
+                },
+                {
+                    "match": ".py",
+                    "cmd": "/Users/xfenix/.pyenv/shims/autoflake --in-place --remove-all-unused-imports --remove-unused-variables --ignore-init-module-imports --remove-duplicate-keys ${file}",
+                    "silent": true,
+                },
             ]
-        }
+        },
     }
     ```
 1. Dont forget to replace `xfenix` with you user!
