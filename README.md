@@ -147,6 +147,11 @@ This config meant for python development. But you can grab any part of it for ot
             "--no-lines-before",
             "STDLIB,LOCALFOLDER"
         ],
+        "[python]": {
+            "editor.codeActionsOnSave": {
+                "source.organizeImports": true
+            }
+        },
         "emeraldwalk.runonsave": {
             "commands": [
                 {
