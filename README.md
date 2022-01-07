@@ -139,6 +139,8 @@ This config meant for python development. But you can grab any part of it for ot
         "python.formatting.blackPath": "/Users/xfenix/.pyenv/shims/black",
         "python.formatting.provider": "black",
         "python.sortImports.path": "/Users/xfenix/.pyenv/shims/isort",
+        // please, be prepared: this options will override any options in your isort.cfg, pyproject.toml
+        // and etc. So — if you want to customize, comments this options
         "python.sortImports.args": [
             "--line-width",
             "120",
@@ -161,7 +163,7 @@ This config meant for python development. But you can grab any part of it for ot
                 },
                 {
                     "match": ".py",
-                    "cmd": "/Users/xfenix/.pyenv/shims/pybetter ${file}",
+                    "cmd": "/Users/xfenix/.pyenv/shims/pybetter ${file} --exclude=B004",
                     "silent": true,
                 },
                 {
