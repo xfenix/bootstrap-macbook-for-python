@@ -1,8 +1,9 @@
 # Fresh macbook bootstrap
 Say for example you got new macbook and you are web developer with stack consist of python for backend and/or typescript for frontend. This instruction will help you to prepare your macbook for work in cutting edge environment.
-- [Basic setup](#basic-setup)
-- [Python part](#python-part)
-- [VSCode configuration](#vscode-configuration)
+- [Fresh macbook bootstrap](#fresh-macbook-bootstrap)
+  - [Basic setup](#basic-setup)
+  - [Python part](#python-part)
+  - [VSCode configuration](#vscode-configuration)
 
 ## Basic setup
 1. Setup o my zsh
@@ -81,7 +82,7 @@ Say for example you got new macbook and you are web developer with stack consist
    ```
 1. Install all necessary packages
     ```bash
-    pip install black isort docformatter pybetter autoflake pyupgrade
+    pip install black isort docformatter pybetter autoflake pyupgrade poetry
     ```
 1. Dont forget to restart bash/zsh session!
 
