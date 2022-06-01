@@ -1,9 +1,8 @@
 # Fresh macbook bootstrap
-You got new macbook and you are web developer with python backend and/or typescript frontend? This instruction will help you to prepare macbook for work.
-
-  - [Basic setup](#basic-setup)
-  - [Python part](#python-part)
-  - [VSCode configuration](#vscode-configuration)
+Say for example you got new macbook and you are web developer with stack consist of python for backend and/or typescript for frontend. This instruction will help you to prepare your macbook for work in cutting edge environment.
+- [Basic setup](#basic-setup)
+- [Python part](#python-part)
+- [VSCode configuration](#vscode-configuration)
 
 ## Basic setup
 1. Setup o my zsh
@@ -30,7 +29,7 @@ You got new macbook and you are web developer with python backend and/or typescr
     ```
 1. Install all necessary packages:
     ```bash
-    brew install stats itsycal git iterm2 visual-studio-code pyenv gpg-suite grammarly marta node dozer appcleaner keyboardcleantool karabiner-elements
+    brew install postman stats itsycal git iterm2 visual-studio-code pyenv gpg-suite shottr marta node dozer appcleaner keyboardcleantool karabiner-elements
     ```
     1. <a href="https://github.com/Mortennn/Dozer" target="_blank">Dozer</a> help you to organize your menu bar, since macbook notch gain troubles in this area
     1. Grammarly is the best app for good english writing skills, those whom i lack
@@ -72,21 +71,18 @@ You got new macbook and you are web developer with python backend and/or typescr
 1. Setup pyenv
     ```bash
     echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
-    ```
-    ```bash
     echo 'eval "$(pyenv init -)"' >> ~/.zshrc
     ```
 1. Install and select desired python
    ```bash
-   pyenv install 3.10.1
-   ```
-   ```bash
-   pyenv global 3.10.1
+   pyenv install 3.10.4
+   pyenv global 3.10.4
    ```
 1. Install all necessary packages
     ```bash
-    pip install black isort docformatter pybetter autoflake
+    pip install black isort docformatter pybetter autoflake pyupgrade
     ```
+1. Dont forget to restart bash/zsh session!
 
 ## VSCode configuration
 This config meant for python development. But you can grab any part of it for other purposes.<br>
@@ -140,7 +136,8 @@ This config meant for python development. But you can grab any part of it for ot
         "python.formatting.provider": "black",
         "python.sortImports.path": "/Users/xfenix/.pyenv/shims/isort",
         // please, be prepared: this options will override any options in your isort.cfg, pyproject.toml
-        // and etc. So — if you want to customize, comments this options
+        // and etc. So — if you want to customize, please, remove/dont copy this options
+        // this is kinda default setup for all cases
         "python.sortImports.args": [
             "--line-width",
             "120",
@@ -169,6 +166,11 @@ This config meant for python development. But you can grab any part of it for ot
                 {
                     "match": ".py",
                     "cmd": "/Users/xfenix/.pyenv/shims/autoflake --in-place --remove-all-unused-imports --remove-unused-variables --ignore-init-module-imports --remove-duplicate-keys ${file}",
+                    "silent": true,
+                },
+                {
+                    "match": ".py",
+                    "cmd": "/Users/xfenix/.pyenv/shims/pyupgrade --py310-plus ${file}",
                     "silent": true,
                 },
             ]
