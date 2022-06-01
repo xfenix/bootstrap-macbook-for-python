@@ -33,10 +33,10 @@ Say for example you got new macbook and you are web developer with stack consist
     brew install postman stats itsycal git iterm2 visual-studio-code pyenv gpg-suite shottr marta node dozer appcleaner keyboardcleantool karabiner-elements
     ```
     1. <a href="https://github.com/Mortennn/Dozer" target="_blank">Dozer</a> help you to organize your menu bar, since macbook notch gain troubles in this area
-    1. Grammarly is the best app for good english writing skills, those whom i lack
     1. <a href="https://marta.sh" target="_blank">Marta</a> is the sublime-like completely free file manager
     1. AppCleaner help you clean garbage after application removal
     1. <a href="https://folivora.ai/keyboardcleantool">KeyboardCleanTool</a> helps you to clean you keyboard! Very useful app for every developer
+    1. <a href="https://shottr.cc/">Shottr</a> literally best screenshot tool
     1. (Optional) Karabiner elements will be useful for remapping keys on the Russian keyboard layout. This really helps for ~ symbol return. On other keyboard layouts it not so useful by default
 1. Configure Iterm2:
    1. It helps not to disturb you ![](iterm2-part1.png)
