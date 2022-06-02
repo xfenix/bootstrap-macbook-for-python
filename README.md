@@ -67,7 +67,7 @@ Say for example you got new macbook and you are web developer with stack consist
    1. Create projects dir `mkdir ~/web/`
    1. Exclude from spotlight indexing (greatly reduce CPU pressure):  -> Settings -> Spotlight -> Privacy, press +, then `⌘ + shift + g` and enter following paths:
       1. `~/web/`
-      1. `/Users/xfenix/Library/Containers`, where `xfenix` — you current user
+      1. `~/Library/Containers`
 
 ## Python part
 1. Setup pyenv
@@ -83,12 +83,14 @@ Say for example you got new macbook and you are web developer with stack consist
 1. Install all necessary packages and configure poetry
     ```bash
     pip install black isort docformatter pybetter autoflake pyupgrade poetry
-    poetry config virtualenvs.in-project true
+    poetry config cache-dir ~/.cache/pypoetry/
     ```
 1. Dont forget to restart bash/zsh session!
 
 ## VSCode configuration
 This config meant for python development. But you can grab any part of it for other purposes.<br>
+1. Open the Command Palette (⌘ + ⇧ + P on Mac) OR View ❯ Command Palette
+1. Type shell command to find Shell Command: Install 'code' command in PATH command
 1. Install extensions:
     ```bash
     code --install-extension wk-j.save-and-run
@@ -132,12 +134,13 @@ This config meant for python development. But you can grab any part of it for ot
             "plaintext": "html"
         },
 
-        "python.defaultInterpreterPath": "/Users/xfenix/.pyenv/shims/python",
-        "python.linting.mypyPath": "/Users/xfenix/.pyenv/shims/mypy",
+        "python.defaultInterpreterPath": "~/.pyenv/shims/python",
+        "python.venvPath": "~/.cache/pypoetry/virtualenvs",
+        "python.linting.mypyPath": "~/.pyenv/shims/mypy",
         "python.linting.mypyEnabled": true,
-        "python.formatting.blackPath": "/Users/xfenix/.pyenv/shims/black",
+        "python.formatting.blackPath": "~/.pyenv/shims/black",
         "python.formatting.provider": "black",
-        "python.sortImports.path": "/Users/xfenix/.pyenv/shims/isort",
+        "python.sortImports.path": "~/.pyenv/shims/isort",
         // please, be prepared: this options will override any options in your isort.cfg, pyproject.toml
         // and etc. So — if you want to customize, please, remove/dont copy this options
         // this is kinda default setup for all cases
@@ -158,22 +161,22 @@ This config meant for python development. But you can grab any part of it for ot
             "commands": [
                 {
                     "match": ".py",
-                    "cmd": "/Users/xfenix/.pyenv/shims/docformatter --in-place ${file}",
+                    "cmd": "~/.pyenv/shims/docformatter --in-place ${file}",
                     "silent": true,
                 },
                 {
                     "match": ".py",
-                    "cmd": "/Users/xfenix/.pyenv/shims/pybetter ${file} --exclude=B004",
+                    "cmd": "~/.pyenv/shims/pybetter ${file} --exclude=B004",
                     "silent": true,
                 },
                 {
                     "match": ".py",
-                    "cmd": "/Users/xfenix/.pyenv/shims/autoflake --in-place --remove-all-unused-imports --remove-unused-variables --ignore-init-module-imports --remove-duplicate-keys ${file}",
+                    "cmd": "~/.pyenv/shims/autoflake --in-place --remove-all-unused-imports --remove-unused-variables --ignore-init-module-imports --remove-duplicate-keys ${file}",
                     "silent": true,
                 },
                 {
                     "match": ".py",
-                    "cmd": "/Users/xfenix/.pyenv/shims/pyupgrade --py310-plus ${file}",
+                    "cmd": "~/.pyenv/shims/pyupgrade --py310-plus ${file}",
                     "silent": true,
                 },
             ]
