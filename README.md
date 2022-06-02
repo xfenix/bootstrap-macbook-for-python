@@ -80,9 +80,10 @@ Say for example you got new macbook and you are web developer with stack consist
    pyenv install 3.10.4
    pyenv global 3.10.4
    ```
-1. Install all necessary packages
+1. Install all necessary packages and configure poetry
     ```bash
     pip install black isort docformatter pybetter autoflake pyupgrade poetry
+    poetry config virtualenvs.in-project true
     ```
 1. Dont forget to restart bash/zsh session!
 
