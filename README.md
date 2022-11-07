@@ -49,7 +49,7 @@ Say for example you got new macbook and you are web developer with stack consist
     ```
 1. Install docker dekstop: https://www.docker.com/products/docker-desktop
 1. Setup git client:
-   1. Generate GPG key in GPG tools
+   1. Generate GPG key in GPG keychain
    1. Run command:
         ```bash
         gpg --list-secret-keys
@@ -63,6 +63,8 @@ Say for example you got new macbook and you are web developer with stack consist
         git config --global user.signingkey KEY_FROM_PREVIOUS_STEP
         git config --global commit.gpgsign true
         ```
+    1. Export GPG key in GPG keychain
+    1. Paste it in https://github.com/settings/gpg/new
 1. File things:
    1. Create projects dir `mkdir ~/web/`
    1. Exclude from spotlight indexing (greatly reduce CPU pressure):  -> Settings -> Spotlight -> Privacy, press +, then `⌘ + shift + g` and enter following paths:
