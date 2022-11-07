@@ -79,12 +79,15 @@ Say for example you got new macbook and you are web developer with stack consist
     ```
 1. Install and select desired python
    ```bash
-   pyenv install 3.10.4
-   pyenv global 3.10.4
+   pyenv install 3.10.8
+   pyenv global 3.10.8
    ```
-1. Install all necessary packages and configure poetry
+1. Install all necessary packages
     ```bash
     pip install black isort docformatter pybetter autoflake pyupgrade poetry
+    ```
+1. Configure poetry:
+    ```
     poetry config cache-dir ~/.cache/pypoetry/
     ```
 1. Dont forget to restart bash/zsh session!
