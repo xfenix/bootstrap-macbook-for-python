@@ -79,12 +79,12 @@ Say for example you got new macbook and you are web developer with stack consist
     ```
 1. Install and select desired python
    ```bash
-   pyenv install 3.10.8
-   pyenv global 3.10.8
+   pyenv install 3.12.1
+   pyenv global 3.12.1
    ```
 1. Install all necessary packages
     ```bash
-    pip install black isort docformatter pybetter autoflake pyupgrade poetry
+    pip install ruff mypy
     ```
 1. Configure poetry:
     ```
@@ -104,6 +104,7 @@ This config meant for python development. But you can grab any part of it for ot
     code --install-extension helgardrichard.helium-icon-theme
     code --install-extension mde.select-highlight-minimap
     code --install-extension miguelsolorio.fluent-icons
+    code --install-extension ms-python.mypy-type-checker
     code --install-extension ms-python.python
     code --install-extension ms-python.vscode-pylance
     code --install-extension yzhang.markdown-all-in-one
@@ -126,9 +127,7 @@ This config meant for python development. But you can grab any part of it for ot
         "editor.formatOnType": true,
         "editor.formatOnSave": true,
         "editor.renderWhitespace": "all",
-        "editor.rulers": [
-            120
-        ],
+        "editor.rulers": [120],
 
         "debug.console.fontSize": 14,
 
@@ -139,49 +138,16 @@ This config meant for python development. But you can grab any part of it for ot
             "plaintext": "html"
         },
 
-        "python.defaultInterpreterPath": "~/.pyenv/shims/python",
-        "python.venvPath": "~/.cache/pypoetry/virtualenvs",
-        "python.linting.mypyPath": "~/.pyenv/shims/mypy",
-        "python.linting.mypyEnabled": true,
-        "python.formatting.blackPath": "~/.pyenv/shims/black",
-        "python.formatting.provider": "black",
-        "python.sortImports.path": "~/.pyenv/shims/isort",
-        // please, be prepared: this options will override any options in your isort.cfg, pyproject.toml
-        // and etc. So — if you want to customize, please, remove/dont copy this options
-        // this is kinda default setup for all cases
-        "python.sortImports.args": [
-            "--line-width",
-            "120",
-            "--lines-after-imports",
-            "2",
-            "--no-lines-before",
-            "STDLIB,LOCALFOLDER"
-        ],
-        "[python]": {
-            "editor.codeActionsOnSave": {
-                "source.organizeImports": true
-            }
-        },
         "saveAndRun": {
             "commands": [
                 {
                     "match": ".py",
-                    "cmd": "~/.pyenv/shims/docformatter --in-place ${file}",
+                    "cmd": "ruff check --config=${workspaceFolder}/pyproject.toml ${file}",
                     "silent": true,
                 },
                 {
                     "match": ".py",
-                    "cmd": "~/.pyenv/shims/pybetter ${file} --exclude=B004",
-                    "silent": true,
-                },
-                {
-                    "match": ".py",
-                    "cmd": "~/.pyenv/shims/autoflake --in-place --remove-all-unused-imports --remove-unused-variables --ignore-init-module-imports --remove-duplicate-keys ${file}",
-                    "silent": true,
-                },
-                {
-                    "match": ".py",
-                    "cmd": "~/.pyenv/shims/pyupgrade --py310-plus ${file}",
+                    "cmd": "ruff format --config=${workspaceFolder}/pyproject.toml ${file}",
                     "silent": true,
                 },
             ]
