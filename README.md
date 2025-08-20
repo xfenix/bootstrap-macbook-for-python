@@ -98,59 +98,50 @@ This config meant for python development. But you can grab any part of it for ot
 1. Type shell command to find Shell Command: Install 'code' command in PATH command
 1. Install extensions:
     ```bash
-    code --install-extension wk-j.save-and-run
+    code --install-extension charliermarsh.ruff
     code --install-extension esbenp.prettier-vscode
-    code --install-extension GitHub.github-vscode-theme
-    code --install-extension helgardrichard.helium-icon-theme
-    code --install-extension mde.select-highlight-minimap
-    code --install-extension miguelsolorio.fluent-icons
-    code --install-extension ms-python.mypy-type-checker
+    code --install-extension ms-azuretools.vscode-containers
+    code --install-extension ms-python.debugpy
     code --install-extension ms-python.python
     code --install-extension ms-python.vscode-pylance
+    code --install-extension ms-python.vscode-python-envs
+    code --install-extension ms-vscode.makefile-tools
+    code --install-extension wayou.file-icons-mac
     code --install-extension yzhang.markdown-all-in-one
     ```
 1. Place following in you `settings.json`:
     ```json
     {
-        "workbench.colorTheme": "GitHub Dark",
-        "workbench.iconTheme": "helium-icon-theme",
-        "workbench.productIconTheme": "fluent-icons",
-
+        "window.zoomLevel": 1,
+        "security.workspace.trust.untrustedFiles": "open",
+        "workbench.iconTheme": "file-icons-mac",
+        "explorer.confirmPasteNative": false,
+        "explorer.confirmDelete": false,
+    
         "markdown.preview.typographer": true,
         "markdown.extension.orderedList.marker": "one",
-
-        "editor.wordBasedSuggestions": false,
-        "editor.fontFamily": "FiraCode-Retina",
-        "editor.fontSize": 14,
-        "editor.fontLigatures": true,
-        "editor.formatOnPaste": true,
-        "editor.formatOnType": true,
-        "editor.formatOnSave": true,
+    
+        "editor.fontSize": 15,
+        "editor.fontFamily": "Source Code Pro",
         "editor.renderWhitespace": "all",
+        "editor.wordWrap": "on",
         "editor.rulers": [120],
-
-        "debug.console.fontSize": 14,
-
-        "terminal.integrated.fontSize": 14,
-
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "always",
+            "source.organizeImports": "always"
+        },
+        "[html][css][json][markdown][javascript][javascriptreact][typescript][typescriptreact]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[python]": {
+            "editor.defaultFormatter": "charliermarsh.ruff"
+        },
+    
         "emmet.triggerExpansionOnTab": true,
         "emmet.includeLanguages": {
             "plaintext": "html"
-        },
-
-        "saveAndRun": {
-            "commands": [
-                {
-                    "match": ".py",
-                    "cmd": "ruff check --config=${workspaceFolder}/pyproject.toml ${file}",
-                    "silent": true,
-                },
-                {
-                    "match": ".py",
-                    "cmd": "ruff format --config=${workspaceFolder}/pyproject.toml ${file}",
-                    "silent": true,
-                },
-            ]
         },
     }
     ```
